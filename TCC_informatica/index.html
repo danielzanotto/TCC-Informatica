@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Título do TCC</title>
+  <link rel="stylesheet" href="style.css"> <!-- Conecta ao CSS -->
+</head>
+<body>
+
+  <header>
+    <h1 id="cabeçalho">Bem-vindo ao site UnioPets!</h1>
+  </header>
+
+  <nav>
+    <ul class="opcoes">
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Contato</a></li>
+      <li><a href="#">Desenvolvedores</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Seção Principal</h2>
+      <div>
+        Escolha seu animal :D
+        <input type="text" placeholder="Encontre seu proximo pet" name="" id="inputBarraPesquisa">
+        
+        <button onclick="procurar()">pesquisar</button>
+        <p id="nome pesquisado">Buscado</p>
+      </div>
+      <p>Este é o conteúdo principal da página.</p>
+      <div class="informacoesAnimais">
+        <img src="https://cdn-icons-png.flaticon.com/256/1375/1375106.png" alt=" raca do animal" id="Imagemface" class="imagemEstrutura">
+        <p id="raca do animal">Default raca</p>
+        <p id="idade do animal">Default idade</p>
+        <p id="status do animal">Default status</p>
+        <p id="lugar do animal">Default lugar</p>
+        <p id="ong do animal">Default ong</p>
+      </div>
+    <div><button onclick="Encaminhar()">Encaminhar para Adoção</button></div>
+    </section>
+  </main>
+  <footer>
+    <center><p>&copy; 2025 Meu Site de TCC. Todos os direitos reservados.</p></center>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>
