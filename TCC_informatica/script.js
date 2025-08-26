@@ -8,6 +8,11 @@ let ONG = "ONG..."
 let imagem = document.getElementById("Imagemface");
 //let imagem = document.getElementById("Imagemface"+""+valor+""); testar depois
 
+//Informações adicionadas.
+let Novo_perfil = "Imagem"
+
+
+
 
 function Encaminhar(){//troca as informações do animal.
     //dentro do documento.procure o id de nome "". atribua o texto = "texto escolhido" + variavel
@@ -57,7 +62,6 @@ function banco(){
             Encaminhar()
             break;
         case "gato":
-            //var nome = batata (em outras linguagens)
             raca = "Gato" //definindo a variavel em java script 
             idade ="1 mês"
             status_dele ="Buscando um Lar"
@@ -68,4 +72,54 @@ function banco(){
             break;
         }
 }
-//https://s3.amazonaws.com/petz-cdm-stg/94d3341e-1a48-416e-b6ea-f07018db6f1e.jpeg
+
+
+
+function CriandoPerfis(){ //UniaoDados - Cria-se novos elementos com seus respectivos filhos.
+    let Mestre = document.getElementById("FichaAnimal")//Definimos o lugar que irá ser adicionado de id "FichaAnimal"
+    //variaveis locais teste (pai e filha) - //classe pai é do tipo <ul>
+    let Pai = document.createElement("ul") //poderiamos definir pelo tipo getElementById (ul) ou getElementById ("nome da classe")classe do elemento
+    let filho = document.createElement("li") //informa qual o tipo de elemento criado (do tipo html)
+    
+    //variaveis filhas.
+    let raca = document.createElement("p")
+    let idade = document.createElement("p") 
+    let status_dele = document.createElement("p") 
+    let lugar = document.createElement("p") 
+    let ONG = document.createElement("p") 
+//    let imagem = document.createElement("p")
+    
+    filho.textContent = Novo_perfil //texto externo
+    filho.id = "ong do animal" //id da classe filho.
+    Mestre.appendChild(Pai)
+    Pai.appendChild(filho)
+    
+    //Atribuindo valor provisorio as variaveis teste
+    raca.textContent = "Dog" //definindo a variavel em java script 
+    idade.textContent ="2 mês"
+    status_dele.textContent ="Lar encontrado"
+    lugar.textContent = "Santos"
+    ONG.textContent = "ONG: Solaria"
+
+    //Estamos criando um laço de repetição para criar o perfil automaticamente. Uma mera adição experimental.
+    let valor = 0 //definimos uma valor limitar eventualmente o looping.
+    let lista = [raca,idade,status_dele,lugar,ONG]; //lista de elemntos que serão adicionado (Nota: anteriormente criados)
+    while(valor < lista.length){  // compara o valor inicial ao tamanho da nossa lista (5 elementos)
+        Pai.appendChild(lista[valor]) //Adiciona os filhos um por um.
+        valor+=1; //soma até ter o tamanho final da lista.
+    }
+}
+
+let verificacao = document.getElementById("Label")
+
+function Cadastro(){
+    
+    let inputCadastro = document.getElementById("inputCadastro")
+    let valor = inputCadastro.value
+    
+    let informacoes = []
+    informacoes.push(valor)
+        if (informacoes.length >0 && valor !=0){
+            verificacao.textContent = informacoes[0]
+        }
+}
